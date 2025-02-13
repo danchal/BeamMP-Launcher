@@ -31,14 +31,14 @@ Remember to change `C:/vcpkg` to wherever you have vcpkg installed.
 Make sure you have `vcpkg` installed, as well as basic development tools, often found in packages, for example:
 
 - Debian: `sudo apt install build-essential`
-- Fedora: `sudo dnf groupinstall "Development Tools"`
+- Fedora: `sudo dnf install @development-tools vcpkg cmake cpp-httplib-devel pybind11-json-devel libcurl-devel`
 - Arch: `sudo pacman -S base-devel`
 - openSUSE: `zypper in -t pattern devel-basis`
 
 ### Release
 
 In the root directory of the project,
-1. `cmake -DCMAKE_BUILD_TYPE=Release . -B bin -DCMAKE_TOOLCHAIN_FILE=~/vcpkg/scripts/buildsystems/vcpkg.cmake -DVCPKG_TARGET_TRIPLET=x64-linux`
+1. `cmake -DCMAKE_BUILD_TYPE=Release . -B bin -DVCPKG_TARGET_TRIPLET=x64-linux`
 2. `cmake --build bin --parallel --config Release`
 
 ### Debug
